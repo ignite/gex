@@ -1,0 +1,11 @@
+project_name: gex
+builds:
+  - main: .
+    ldflags:
+      - -s -w -X github.com/ignite/gex/version.Version={{.Tag}}
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64

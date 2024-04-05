@@ -2,7 +2,7 @@
 
 GEX is a real time in-terminal explorer for Cosmos SDK blockchains. See the [Check out your Cosmos SDK blockchain in a terminal-based block explorer](https://blog.cosmos.network/gaia-explorer-in-terminal-f37a4ea52e3c) blog post to learn more about GEX.
 
-The GEX explorer displays blocks, transactions, validator, network status, and more information. Use the GEX block explorer to see the status of peers, connection, version, and other useful information to have a quick peek into your own node. GEX works with Starport.
+The GEX explorer displays blocks, transactions, validator, network status, and more information. Use the GEX block explorer to see the status of peers, connection, version, and other useful information to have a quick peek into your own node. GEX works with Ignite.
 
 ## Install GEX
 
@@ -10,52 +10,52 @@ The GEX installation requires Go. If you don't already have Go installed, see ht
 
 To install the GEX binary:
 
-```sh
-go install github.com/cosmos/gex@latest
+```shell
+go install github.com/ignite/gex@latest
 ```
 
 ## Run GEX
 
 To launch a GEX explorer in your terminal window, type:
 
-```sh
-gex
+```shell
+gex explorer
 ```
 
 and hit enter.
 
 ## Optional Host
 
-Configure an optional host, instead of using the default RPC host `localhost`
+Configure an optional host, instead of using the default RPC host `http://localhost:26657`
 
-```sh
-gex -h 192.168.0.1
+```shell
+gex explorer 192.168.0.1
 ```
 
 ## Optional Port
 
-Configure an optional port, instead of using the default RPC port `26657`
+Configure an optional port
 
-```sh
-gex -p 27657
-```
-
-## Optional Secure Transport
-Configure connection to use SSL for HTTP and websockets requests
-```sh
-gex -s
+```shell
+gex explorer 192.168.0.1:27657
 ```
 
 ## Print help
-```sh
-gex --help
-Usage of gex:
-  -h string
-               host to connect (default "localhost")
-  -p int
-               port to connect (default 26657)
-  -s boolean   
-               use SSL for connection
+```shell
+Usage:
+  gex [command]
+
+Available Commands:
+  completion  Generate the autocompletion script for the specified shell
+  explorer    Gex is a cosmos explorer for terminals
+  help        Help about any command
+  version     Print the current build information
+
+Flags:
+  -h, --help   help for gex
+
+Use "gex [command] --help" for more information about a command.
+
 ```
 
 ## Preview
@@ -64,9 +64,9 @@ Usage of gex:
 
 ## Run In Development
 
-To manually run GEX, clone the `github.com/cosmos/gex` repository and then cd into the `gex` directory. Then to run GEX manually, type this command in a terminal window:
+To manually run GEX, clone the `github.com/ignite/gex` repository and then cd into the `gex` directory. Then to run GEX manually, type this command in a terminal window:
 
-`go run main.go`
+`go run main.go explorer`
 
 ## Contribute
 
